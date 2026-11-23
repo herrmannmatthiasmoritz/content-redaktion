@@ -43,7 +43,10 @@ Cockpit — nicht ändern, ohne das Cockpit mitzuziehen.
    in Drive.
 7. **Keine Chat-Zustellung von Dateien.** Ergebnis ist die Ablage, nicht eine Nachricht.
    Am Ende eines Laufs genau eine kurze Statuszeile.
-8. **Unbeaufsichtigt.** Keine Rückfragen. Bei Unklarheit die vorsichtigere Lesart nehmen und
+8. **Vor jedem Anlegen prüfen, ob echter Inhalt drinsteht.** Weniger als 200 Zeichen oder
+   ein Platzhalter aus einer Formatvorgabe (`<vollständige …>`, `<…>`) → nicht anlegen,
+   Subagent erneut fragen, im Protokoll vermerken. (Vorfall 23.11.: drei Platzhalterdateien.)
+9. **Unbeaufsichtigt.** Keine Rückfragen. Bei Unklarheit die vorsichtigere Lesart nehmen und
    im Laufprotokoll nennen.
 
 ## Sprache
