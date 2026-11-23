@@ -4,6 +4,11 @@
 
 standard_zeitraum: letzte 7 Tage
 
+# Parallelbetrieb mit den alten Recherche-Aufgaben (Phase 1). Solange true, hängt der
+# Redaktionslauf an jeden Dateinamen " (Redaktion)" an, damit alte und neue Karten im
+# Cockpit nebeneinander stehen. Auf false setzen, sobald die alten Aufgaben pausiert sind.
+parallelbetrieb: true
+
 themen:
   - id: ai-usecases-fertigung
     aktiv: true

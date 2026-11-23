@@ -1,4 +1,4 @@
-# Redaktionslauf (wöchentlich, Montag 05:00 UTC)
+# Redaktionslauf (wöchentlich, Montag ca. 06:00 Europe/Berlin)
 
 Unbeaufsichtigt. Erst `CLAUDE.md` lesen. IDs aus `config/drive.yaml`.
 Stempel für diesen Lauf: aktuelle UTC-Zeit als `YYYYMMDDTHHMMSS`, Datum als `YYYY-MM-DD`.
@@ -44,6 +44,9 @@ Schlägt ein Rechercheur fehl: einmal neu starten, dann ohne dieses Thema weiter
 
 Subagent **redakteur** mit allen Reports, Profil, Positionierung, letzten 8 Post-Themen.
 Antwort ist ein JSON-Array. Für jeden Eintrag mit `inhalt`:
+- Steht in `config/themen.yaml` `parallelbetrieb: true`: vor `.md` den Zusatz ` (Redaktion)`
+  einfügen, z. B. `2026-11-30 AI Trends Mittelstand (Redaktion).md`. Sonst gleichnamige
+  Dateien der alten Aufgaben → Kollision.
 - Datei `01-Research/<dateiname>` anlegen (text/markdown, keine Konvertierung)
 - Gibt es den Dateinamen schon: nicht anlegen, im Protokoll vermerken (das Cockpit würde
   sonst zwei Karten mit derselben id bauen)
