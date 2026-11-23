@@ -1,4 +1,4 @@
-# Draftlauf (täglich 12:00 und 19:00 Europe/Berlin)
+# Draftlauf (täglich ca. 12:00 und 19:00 Europe/Berlin)
 
 Unbeaufsichtigt. Erst `CLAUDE.md` lesen. IDs aus `config/drive.yaml`.
 
@@ -6,6 +6,13 @@ Unbeaufsichtigt. Erst `CLAUDE.md` lesen. IDs aus `config/drive.yaml`.
 
 `02-Drafts` nach `anforderung-*.md` und `nachschliff-*.md` durchsuchen.
 Keine Treffer → eine Zeile `Draftlauf: nichts angefordert.` und Ende. Kein Protokoll.
+
+**Schon erledigt?** Eine Anforderung gilt als erledigt, wenn es in `02-Drafts` eine Datei
+`<id>-draft.md` gibt, deren `createdTime` jünger ist als die der Anforderung. Ebenso ein
+Nachschliff, wenn es eine `stil-A-matthias-*.md` gibt, die jünger ist. Erledigte Anforderungen
+nicht noch einmal bearbeiten. Nur in den Papierkorb legen; scheitert das, liegen lassen und
+im Protokoll vermerken. Grund: Das Verschieben in den Papierkorb kann verweigert werden, und
+ohne diese Prüfung entstünde bei jedem Lauf ein neuer Draft.
 
 ## 1. Je Anforderung (`anforderung-<id>.md`)
 
@@ -33,6 +40,7 @@ Keine Treffer → eine Zeile `Draftlauf: nichts angefordert.` und Ende. Kein Pro
    - `02-Drafts/<id>-draft.md` nach `formate/draft-datei.md` (ohne Ton!)
    - `LinkedIn-Experiment/<id>-ton-<stempel>.md` mit Ton, Sprache, experiment, zuweisung_nr
 8. Erst wenn beides angelegt ist: `anforderung-<id>.md` in den Papierkorb (`trash_file`).
+   Wird das verweigert: liegen lassen (siehe „Schon erledigt?").
 
 Mehrere Anforderungen nacheinander abarbeiten, nicht parallel — die Zuweisungsnummer
 hängt am Zählerstand.

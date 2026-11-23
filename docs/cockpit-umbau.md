@@ -1,5 +1,8 @@
 # Cockpit-Umbau (Artefakt „Content-Kuration")
 
+**Stand 23.11.2026:** Punkte 1–3 umgesetzt (plus Marke „Redaktion" für den Parallelbetrieb).
+Offen: 4 (Kennzahlen) und 5 (Klick-Protokoll, nicht dringend, weil das Artefakt lesbar ist).
+
 Gezielte Änderungen, keine Neufassung. **Vorher das Cockpit überall schließen**: Das Cockpit
 publiziert bei jedem Klick seine geladene Fassung neu. Ist es offen, während der Umbau
 veröffentlicht wird, kann ein Klick den Umbau überschreiben oder umgekehrt.
