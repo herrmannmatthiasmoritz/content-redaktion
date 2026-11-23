@@ -30,6 +30,15 @@ Mo  Redaktionslauf   lern-agent → rechercheur ×5 (parallel) → redakteur →
 | `vault-seed/` | Startinhalt von `00-System` (schon in Drive angelegt am 23.11.2026) |
 | `docs/cockpit-umbau.md` | geplante Änderungen am Cockpit-Artefakt |
 
+## Lokal arbeiten: echte Daten ohne Drive-Connector
+
+Drive for Desktop spiegelt den Vault auf den Mac, typischerweise unter
+`~/Library/CloudStorage/GoogleDrive-<mail>/Meine Ablage/LinkedIn-Pipeline/`.
+Claude Code kann diese Dateien direkt **lesen**, z. B. echte Reports aus `01-Research` als
+Eingabe für einen Trockenlauf. **Geschrieben wird lokal nur nach `tests/out/`.** In den Vault
+schreiben ausschließlich die Läufe in der Cloud, sonst kommen Versionsregel und Cockpit
+durcheinander.
+
 ## Lokal ausprobieren (Claude Code)
 
 ```bash
