@@ -18,9 +18,12 @@ Keine Treffer → eine Zeile `Draftlauf: nichts angefordert.` und Ende. Kein Pro
    - Gibt es für diese `id` schon eine Zuweisung (erneute Anforderung): **denselben Ton**
      wiederverwenden, keine neue Nummer ziehen.
 4. Stildatei laden: jüngste Fassung von `00-System/stil/stil-A-matthias*.md` bzw.
-   `stil-B-claude.md`. Ist stil-A noch der Platzhalter (Abschnitt „Status: leer"), dann
-   **keinen Draft schreiben**: Anforderung liegen lassen, im Protokoll vermerken
-   „wartet auf Stil-Korpus".
+   `stil-B-claude.md`.
+   **Übergangsmodus**, solange stil-A noch der Platzhalter ist (Frontmatter `status: leer`):
+   Schritt 3 überspringen und stattdessen `ton: B`, `experiment: false`,
+   `zuweisung_nr: null` festlegen. Es wird ganz normal ein Draft geschrieben, er zählt nur
+   nicht zum Experiment. Das Experiment beginnt mit dem ersten Draft, nachdem eine gefüllte
+   stil-A-Fassung existiert.
 5. Subagent **schreiber** (Karte, Stil, Sprache, Profil-Auszug).
 6. Subagent **kritiker** (Post, Beipackzettel, Quellen-URLs der Karte, Stil, Sprache).
    - `freigabe: false` → schreiber **einmal** mit `kritik` = Mängelliste, danach kritiker erneut.

@@ -2,7 +2,7 @@
 # Vorab festgelegt am 23.11.2026. Nicht während des Experiments ändern.
 
 aktiv: true
-start: erster Draft nach Inbetriebnahme des Draftlaufs
+start: erster Draft, nachdem eine gefüllte stil-A-Fassung existiert (vorher Übergangsmodus, zählt nicht)
 toene:
   A: 00-System/stil/stil-A-matthias.md   # wird nur aus A-Posts und Stil-Korpus nachgeschärft
   B: 00-System/stil/stil-B-claude.md     # eingefroren

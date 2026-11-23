@@ -38,10 +38,12 @@ themen:
       Finanzierungsrunden ohne Anwendungsbezug weglassen (Tool-2-Scope).
 
   - id: wettbewerber-scaleups
-    aktiv: true
+    aktiv: false   # deaktiviert 23.11.2026 auf Wunsch von Matthias; zum Reaktivieren auf true setzen
     titel: Hardware-Scale-ups im Raum München (Finanzierung, Kündigungen, Führungswechsel, Produktlaunches)
     dateiname: Wettbewerber-News Hardware-Scale-ups
     fokus: >-
       Ursprünglich für die Jobsuche angelegt. Für LinkedIn nur verwertbar, wenn ein
       Industrialisierungs- oder AI-Winkel erkennbar ist.
-    hinweis: Zweck mit Matthias klären — Jobsuche oder Content?
+    hinweis: >-
+      Pausiert, nicht gelöscht. Die alte geplante Aufgabe "Recherche: Wettbewerber-News
+      (Hardware-Scale-ups München)" ist ebenfalls nur deaktiviert.
