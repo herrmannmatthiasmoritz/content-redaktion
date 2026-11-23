@@ -1,0 +1,28 @@
+# Google-Drive-IDs (Stand 23.11.2026). Ordnernamen können sich ändern, IDs nicht.
+
+pipeline: 1HTNzi1_dobsFkXAvCVtAUf35UX6zlnXn          # LinkedIn-Pipeline = Obsidian-Vault "Content"
+research: 1mSyQHvD--JUBQKIiorAeMYl_gGDFLW7-          # 01-Research
+drafts: 168t3CKKOG7QT8SZ1471XVX3ndaGaAkZg            # 02-Drafts
+veroeffentlicht: 1vbABIY2qfutDzYZnnuLeCxeV9-f1o-5x   # 03-Veroeffentlicht
+
+system: 1KaA2xcfYRWpw7fLca0_QUSxazo0pL9iz            # 00-System
+system_ordner:
+  profil: 1hRWfO3d8kH3JhNGptKjbiex7wwRJnN-l
+  stil: 1372GxPImB0-ZM0lXO8-yRY7gs_Ul0ZEC
+  stil_korpus: 1FG88ZeJ-u6Q-iXD-wMMFr2R--JAgj9u0
+  performance: 1MfGlokBy5WUVVdxJj90MeME4vIBV4iLG
+  ton_experiment: 1yXDgs82pNVHJeXPlC_P77Bue8MRejVbD
+  scout: 1p-x3xKQ-FQJ94c_ocSP-TEVuk-yzaBMe
+  protokolle: 1TUsizXBYUX2OkKScwxN_ZHrScAaeNxFM
+  vorlagen: 1DGepwvVSZL1TkHDJKKyE8Li_6kfdyY7h
+  klicks: 1Uli4AHS96IHAHBfB1y_mQcGZ8jc5ovpp
+
+system_dateien:
+  quellen: 1Y5tF-1kPGuSsI_pak3e_q_79v2fEN96e
+  stil_b: 1_t3vqbwNHvd9TfoSAijzryCxXeigiAjb
+
+# AUSSERHALB des Vaults — enthält die Ton-Zuweisungen. Matthias öffnet ihn nicht.
+experiment: 1Kz5n8AJ2QJn9CPPqOoQy14L3hrCV_zQp       # LinkedIn-Experiment
+
+# Cockpit-Artefakt (Kurationszustand als JSON im Artefakt)
+cockpit_slug: 74ffbb63-444e-4637-a39f-c965f42a144b

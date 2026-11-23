@@ -1,0 +1,47 @@
+# Themen des Redaktionslaufs. Je Eintrag startet ein Rechercheur.
+# Übernommen aus den 5 bisherigen Scheduled Tasks (Stand 23.11.2026).
+# Matthias pflegt diese Datei; der Scout macht nur Vorschläge.
+
+standard_zeitraum: letzte 7 Tage
+
+themen:
+  - id: ai-usecases-fertigung
+    aktiv: true
+    titel: AI Usecases in der Hardware/Fertigung
+    dateiname: AI Usecases Hardware-Fertigung      # bisheriger Name, das Cockpit kennt ihn
+    fokus: >-
+      Konkrete AI-Anwendungen in Fertigung, Verfahrenstechnik, Werkstoffen,
+      Prozessautomatisierung — mit Belegen, nicht Ankündigungen.
+
+  - id: additive-industrialisierung
+    aktiv: true
+    titel: Technologie- und Marktentwicklungen in additiver Fertigung und Industrialisierung/Deployment-Scale-up
+    dateiname: Additive Fertigung
+    fokus: >-
+      Weg vom Pilot zur Serie, Anlagen, Werkstoffe, Qualifizierung, Kostenkurven.
+      Reine Quartalszahlen gehören zu Agent 01, nicht hierher.
+
+  - id: ai-mittelstand
+    aktiv: true
+    titel: AI Trends im Mittelstand
+    dateiname: AI Trends Mittelstand
+    fokus: >-
+      Studien, Umfragen, Fallbeispiele zur AI-Einführung im deutschen Mittelstand,
+      besonders produzierendes Gewerbe.
+
+  - id: ai-releases
+    aktiv: true
+    titel: AI-spezifische Releases, Ankündigungen und Produktnews (relevante Modelle, Tools, Plattformen)
+    dateiname: AI Releases Produktnews
+    fokus: >-
+      Nur Releases mit erkennbarem Anwendungsnutzen für Praktiker; Benchmarks und
+      Finanzierungsrunden ohne Anwendungsbezug weglassen (Tool-2-Scope).
+
+  - id: wettbewerber-scaleups
+    aktiv: true
+    titel: Hardware-Scale-ups im Raum München (Finanzierung, Kündigungen, Führungswechsel, Produktlaunches)
+    dateiname: Wettbewerber-News Hardware-Scale-ups
+    fokus: >-
+      Ursprünglich für die Jobsuche angelegt. Für LinkedIn nur verwertbar, wenn ein
+      Industrialisierungs- oder AI-Winkel erkennbar ist.
+    hinweis: Zweck mit Matthias klären — Jobsuche oder Content?

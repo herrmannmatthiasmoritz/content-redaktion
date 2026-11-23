@@ -1,0 +1,31 @@
+# Ton-Experiment: Matthias-Ton (A) gegen Claude-Ton (B)
+# Vorab festgelegt am 23.11.2026. Nicht während des Experiments ändern.
+
+aktiv: true
+start: erster Draft nach Inbetriebnahme des Draftlaufs
+toene:
+  A: 00-System/stil/stil-A-matthias.md   # wird nur aus A-Posts und Stil-Korpus nachgeschärft
+  B: 00-System/stil/stil-B-claude.md     # eingefroren
+
+zuweisung:
+  verfahren: blockrandomisiert, Blockgröße 4, fester Seed (tools/ton_zuweisung.py)
+  nur_sprache: en            # deutsche Drafts bekommen Ton A und zählen nicht zum Experiment
+  blind: true                # Ton steht nur im Drive-Ordner LinkedIn-Experiment, außerhalb des Vaults
+
+messgroessen:
+  akzeptanz: nachschliff_distanz      # 0 = übernommen, 1 = neu geschrieben
+  wirkung: engagement_rate_tag7       # (Reaktionen + 2·Kommentare + 3·Reposts) / Impressionen
+  verunreinigt_ab_distanz: 0.4        # darüber: zählt als "bei Matthias durchgefallen",
+                                      # nicht in den Wirkungsvergleich
+
+zwischenstand_nach_posts: 10
+entscheidung_nach_posts: 20
+spaetestens: 2027-03-31
+
+entscheidungsregel:
+  - A gewinnt Akzeptanz UND Wirkung → A wird Standard
+  - B gewinnt nur Wirkung → Mischform prüfen (Struktur B, Stimme A)
+  - B gewinnt Akzeptanz UND Wirkung → B wird Standard, Stil-Korpus prüfen
+  - Unterschied in der Wirkung kleiner als Faktor 1,3 → bei dieser Datenmenge kein Befund;
+    Akzeptanz entscheidet
+berichtsform: Richtung plus Spannweite (Median, Min–Max je Ton), keine p-Werte
