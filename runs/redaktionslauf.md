@@ -38,11 +38,19 @@ Für jedes aktive Thema **gleichzeitig** einen Subagenten **rechercheur** starte
 Task-Aufrufe in einer Nachricht). Mitgeben: Thema, Fokus, Zeitraum, Quellenlisten,
 Profil-Auszug, `bereits_gesehen` dieses Themas.
 
+Themen mit `art: lernstoff` zusätzlich:
+- `art`, `zeitraum` und `themenpool` aus `config/themen.yaml`
+- `material`: Inhalt aller Dateien im angegebenen Repo-Ordner (z. B. `config/lernstoff/`)
+- `bereits_gesehen` hier aus den letzten **12** Wochen statt 3, sonst wiederholt sich der
+  Themenpool zu schnell. Maßgeblich sind die `# Recherche: AI einfach erklärt: <Begriff>`-Zeilen.
+
 Schlägt ein Rechercheur fehl: einmal neu starten, dann ohne dieses Thema weiter.
 
 ## 4. Redaktion
 
 Subagent **redakteur** mit allen Reports, Profil, Positionierung, letzten 8 Post-Themen.
+Jeden Report mit seiner `thema_id` und `art` (falls gesetzt) kennzeichnen, damit der
+Redakteur Erklärstücke (`art: lernstoff`) nach seinen Sonderregeln behandelt.
 Antwort ist ein JSON-Array. Für jeden Eintrag mit `inhalt`:
 - Steht in `config/themen.yaml` `parallelbetrieb: true`: vor `.md` den Zusatz ` (Redaktion)`
   einfügen, z. B. `2026-11-30 AI Trends Mittelstand (Redaktion).md`. Sonst gleichnamige

@@ -42,6 +42,32 @@ themen:
       Nur Releases mit erkennbarem Anwendungsnutzen für Praktiker; Benchmarks und
       Finanzierungsrunden ohne Anwendungsbezug weglassen (Tool-2-Scope).
 
+  - id: ai-lernstoff
+    aktiv: true
+    art: lernstoff        # zeitlos statt Nachrichtenlage; Sonderregeln in rechercheur.md, redakteur.md, schreiber.md
+    titel: AI einfach erklärt (LLMs, Agenten, agentic AI)
+    dateiname: AI einfach erklaert
+    zeitraum: zeitlos — ein aktueller Anlass aus den letzten 30 Tagen ist willkommen, aber keine Pflicht
+    fokus: >-
+      Lerninhalte für Praktiker ohne KI-Hintergrund: je Woche EIN Begriff oder Konzept
+      rund um LLMs und Agenten, in einfacher Sprache und mit einer tragenden Analogie,
+      möglichst aus Fertigung, Werkstatt oder Alltag. Belegt aus Primärquellen
+      (Anbieter-Dokumentation, Paper, Standards), nicht aus Hype-Artikeln.
+    material: config/lernstoff/   # Matthias' Rohnotizen; der Rechercheur nutzt sie als Ausgangspunkt
+    # Reihenfolge = Vorschlag. Erledigtes erkennt der Lauf an bereits_gesehen.
+    # Matthias pflegt diese Liste: ergänzen, umsortieren, streichen.
+    themenpool:
+      - Agent Harness — das „Geschirr“ um das Modell (Material: 2026-11-25-eingang-matthias.md)
+      - Trace und Spans — der Flugschreiber eines Agenten-Laufs (Material: 2026-11-25-eingang-matthias.md)
+      - Agentic Loop — warum ein Agent im Kreis läuft und wann er aufhört
+      - Tool Calling und MCP — wie ein Modell Werkzeuge bedient, ohne sie selbst anzufassen
+      - Context Window und Context Engineering — der Arbeitstisch des Modells
+      - RAG — nachschlagen statt auswendig wissen
+      - Human-in-the-Loop und Permissions — wer den Schlüssel zum Schreibrecht hat
+      - Evals und Regression-Tests — wie man Agenten prüft wie Bauteile
+      - Tokens und Kosten — wofür man eigentlich bezahlt
+      - Halluzinationen — warum das Modell lieber rät als schweigt
+
   - id: wettbewerber-scaleups
     aktiv: false   # deaktiviert 23.11.2026 auf Wunsch von Matthias; zum Reaktivieren auf true setzen
     titel: Hardware-Scale-ups im Raum München (Finanzierung, Kündigungen, Führungswechsel, Produktlaunches)
