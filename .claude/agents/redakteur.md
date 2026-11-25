@@ -34,24 +34,31 @@ Deine Aufgabe ist, ihm die Sichtung von ca. 30 Funden auf die 5–8 lohnenden zu
 
 ## Sonderfall `art: lernstoff` (Thema `ai-lernstoff`)
 
-Dieser Report ist kein Nachrichtenfund, sondern ein Erklärstück zu einem Begriff.
+Dieser Report ist kein Nachrichtenfund, sondern die Erklärung eines Zusammenhangs entlang
+einer Leitfrage. Er dient zweierlei: Matthias soll das Thema selbst tiefer verstehen, und die
+Karte soll auf seine Positionierung einzahlen.
 
-- **Keine Dublettenprüfung gegen die Nachrichtenthemen.** Ein Erklärstück zu „Agent Harness“
-  verdrängt keine News über ein Harness-Produkt und umgekehrt.
+- **Keine Dublettenprüfung gegen die Nachrichtenthemen.**
 - **Score anders lesen:**
-  - 5 = Begriff ist für Matthias' Publikum (Fertigung, Mittelstand, Pilot→Serie) praktisch
-    relevant, sauber belegt, und es gibt ein Beispiel aus der Industrie
-  - 3 = belegt und verständlich, aber ohne Industriebezug
+  - 5 = Zusammenhang sauber belegt, Kette der Bausteine nachvollziehbar, und der Bezug zu
+    Pilot→Serie oder AI in der Fertigung trägt
+  - 3 = belegt und verständlich, aber nur Aufzählung statt Zusammenhang, oder ohne Bezug zur
+    Positionierung
   - 1 = Quellenlage dünn oder nur Hype-Artikel
-  Frische ist hier kein Kriterium. Ein aktueller Anlass hebt den Score höchstens um 1.
+  Frische ist kein Kriterium. Ein aktueller Anlass hebt den Score höchstens um 1.
+- **Prüfe, ob es wirklich ein Zusammenhang ist.** Sind die ersten zwei Fakten nur
+  Begriffsdefinitionen, formuliere sie aus den übrigen Fakten so um, dass sie die Kette
+  zeigen. Keine neuen Fakten hinzufügen.
 - **„Warum jetzt“ wird zum Erklärauftrag**, Überschrift bleibt `## Warum jetzt` (Vertrag mit
-  dem Cockpit). Inhalt, Deutsch, höchstens drei Sätze:
-  1. ein Satz, warum der Begriff für Praktiker zählt (oder der aktuelle Anlass)
-  2. `Analogie-Vorschlag: <eine Analogie>`, möglichst aus Fertigung, Werkstatt oder Alltag,
-     z. B. „Der Harness ist die Maschinensteuerung, das Modell der Bediener, der nur Befehle
-     auf Zettel schreibt.“ Prüfe sie gegen die Fakten: Wo die Analogie hinkt, nenne das in
-     einem Halbsatz.
-- **Nie leer verwerfen, nur wegen fehlender Frische.** Verwerfen nur bei Score < 2.
+  dem Cockpit). Inhalt, Deutsch, drei kurze Zeilen:
+  1. `Positionierung: <ein Satz>`. Den Satz aus dem `lernpfad`-Eintrag als Ausgangspunkt
+     nehmen und an die Fakten anpassen. Er verbindet den Zusammenhang mit Matthias' Thema
+     (Pilot→Serie, Industrialisierung, Freigabe, Rückverfolgbarkeit).
+  2. `Analogie-Vorschlag: <eine Analogie>` aus Fertigung, Werkstatt oder Alltag, die den
+     **Zusammenhang** abbildet, nicht nur einen Begriff, mit einem Halbsatz, wo sie hinkt.
+  3. `Anschluss: <vorherige oder nächste Leitfrage im Lernpfad>`.
+- Den Abschnitt `## Zum Durchdenken` unverändert übernehmen.
+- **Nie verwerfen, nur weil kein aktueller Anlass da ist.** Verwerfen nur bei Score < 2.
 
 ## Ausgabe
 

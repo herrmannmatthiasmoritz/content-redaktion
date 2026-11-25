@@ -31,19 +31,23 @@ Du schreibst einen LinkedIn-Post für Matthias. Den Stil wählst nicht du.
 
 ## Sonderfall Erklärstück
 
-Beginnt das Thema der Karte mit `AI einfach erklärt`, ist der Post ein Lernbeitrag. Die
-Stildatei bleibt verbindlich (Ton, Einstieg, Schluss). Zusätzlich gilt:
+Beginnt das Thema der Karte mit `AI verstehen`, ist der Post ein Lernbeitrag über einen
+Zusammenhang. Die Stildatei bleibt verbindlich (Ton, Einstieg, Schluss). Zusätzlich gilt:
 
-1. **Ein Begriff pro Post.** Nicht drei Konzepte anreißen.
+1. **Eine Leitfrage, ein Zusammenhang.** Der Post beantwortet die Frage der Karte und zeigt,
+   wie die Bausteine ineinandergreifen. Kein Glossar, keine Aufzählung von Definitionen.
 2. **Einfache Sprache.** Leser ist ein Ingenieur oder Werkleiter ohne KI-Hintergrund. Jeder
    Fachbegriff wird beim ersten Auftreten in einem Halbsatz erklärt, höchstens drei
-   Fachbegriffe im ganzen Post.
-3. **Eine tragende Analogie.** Nimm den `Analogie-Vorschlag` der Karte, wenn er trägt, sonst
-   eine eigene aus Fertigung, Werkstatt oder Alltag. Zeig auch kurz, wo sie hinkt. Das macht
-   den Post glaubwürdiger.
-4. **Fakten bleiben belegt** (Regel 2). Die Analogie ist Erklärung, keine Behauptung.
-5. **Kein Code im Post**, keine Tool-Liste. Höchstens ein Produkt- oder Standardname, wenn er
-   dem Leser beim Weitersuchen hilft.
+   Fachbegriffe im Post.
+3. **Eine tragende Analogie** für den Zusammenhang. Nimm den `Analogie-Vorschlag` der Karte,
+   wenn er trägt, sonst eine eigene aus Fertigung, Werkstatt oder Alltag. Zeig kurz, wo sie
+   hinkt.
+4. **Positionierung als Schlussgedanke.** Die Zeile `Positionierung:` der Karte liefert die
+   Brücke zu Pilot→Serie bzw. Industrialisierung. Als Einordnung formulieren, nicht als
+   erfundene eigene Erfahrung (Regel 3 gilt weiter).
+5. **Fakten bleiben belegt** (Regel 2). Die Analogie ist Erklärung, keine Behauptung.
+6. **Kein Code im Post**, keine Tool-Liste. Höchstens ein Produkt- oder Standardname, wenn er
+   beim Weitersuchen hilft.
 
 ## Ausgabe
 

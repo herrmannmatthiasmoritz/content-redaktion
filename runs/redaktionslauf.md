@@ -39,10 +39,10 @@ Task-Aufrufe in einer Nachricht). Mitgeben: Thema, Fokus, Zeitraum, Quellenliste
 Profil-Auszug, `bereits_gesehen` dieses Themas.
 
 Themen mit `art: lernstoff` zusätzlich:
-- `art`, `zeitraum` und `themenpool` aus `config/themen.yaml`
+- `art`, `zeitraum` und `lernpfad` aus `config/themen.yaml`
 - `material`: Inhalt aller Dateien im angegebenen Repo-Ordner (z. B. `config/lernstoff/`)
 - `bereits_gesehen` hier aus den letzten **12** Wochen statt 3, sonst wiederholt sich der
-  Themenpool zu schnell. Maßgeblich sind die `# Recherche: AI einfach erklärt: <Begriff>`-Zeilen.
+  Lernpfad zu schnell. Maßgeblich sind die `# Recherche: AI verstehen: <Leitfrage>`-Zeilen.
 
 Schlägt ein Rechercheur fehl: einmal neu starten, dann ohne dieses Thema weiter.
 

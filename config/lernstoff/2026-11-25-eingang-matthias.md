@@ -1,6 +1,6 @@
 # Rohmaterial von Matthias, 25.11.2026
 
-Ausgangspunkt für das Thema `ai-lernstoff`. Das sind Notizen, keine Quellen: Jede Aussage, die
+Ausgangspunkt für das Thema `ai-lernstoff` (Lernpfad-Fragen 1 und 2). Das sind Notizen, keine Quellen: Jede Aussage, die
 in eine Karte oder einen Post geht, braucht trotzdem eine verlinkte Primärquelle
 (Anbieter-Doku, Paper, Standard). Der Code ist ein Beispiel zum Verstehen, kein Post-Inhalt.
 
