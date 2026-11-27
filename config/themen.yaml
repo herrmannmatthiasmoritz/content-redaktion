@@ -108,8 +108,15 @@ themen:
 
   # --- neu 27.11.2026 ---
 
+  # Beide Themen stehen bis zum 01.12.2026 auf `aktiv: false`. Grund: der `hinweis` unten
+  # ist eine Auflage an die Agenten, wird aber von runs/redaktionslauf.md Schritt 3 nicht
+  # mitgegeben und erreicht weder Rechercheur noch Redakteur. Solange das so ist, kann der
+  # Redakteur fuer EOS-Anmeldungen genau den Winkel schreiben, den der hinweis verbietet.
+  # Scharf schalten, sobald `hinweis` durchgereicht wird — siehe Protokoll des Laufs vom 30.11.
+
+
   - id: patente-am-ai
-    aktiv: true
+    aktiv: false
     titel: Patente zu additiver Fertigung und AI in der Fertigung
     dateiname: Patente AM und AI-Fertigung
     zeitfenster:
@@ -126,7 +133,7 @@ themen:
       er kommentiert keine Schutzrechte seines Arbeitgebers.
 
   - id: ai-fuehrung
-    aktiv: true
+    aktiv: false
     titel: Was AI-Verantwortliche gerade beschäftigt (Head of AI, CAIO, AI-PM, AI Initiative Lead)
     dateiname: AI-Fuehrung Themen
     fokus: >-
