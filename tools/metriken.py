@@ -3,12 +3,14 @@
 
 Eingabe: ein JSON-Dokument (Datei oder stdin) mit
 {
-  "karten":   [{"id", "thema", "status", "quellen": [url, ...]}],      # aus dem Cockpit-Zustand
-  "posts":    [{"id", "draft": str, "veroeffentlicht": str}],          # aus 03-Veroeffentlicht
+  "karten":   [{"id", "thema", "typ", "status", "quellen": [url, ...]}],  # aus dem Cockpit-Zustand
+  "posts":    [{"id", "typ", "draft": str, "veroeffentlicht": str}],   # aus 03-Veroeffentlicht
   "kennzahlen": [{"id", "impressionen", "reaktionen", "kommentare", "reposts"}],
   "toene":    [{"id", "ton", "experiment": bool}]                      # aus LinkedIn-Experiment
 }
-Ausgabe: JSON mit Annahmequoten, Post-Tabelle und Ton-Vergleich.
+`typ` ist der Fundtyp der Karte (optional, fehlt -> "ohne").
+Ausgabe: JSON mit Annahmequoten (je Thema, Quelle, Typ), Post-Tabelle, Wirkung je Typ
+und Ton-Vergleich.
 
     python3 tools/metriken.py eingabe.json > metriken.json
 """
@@ -81,19 +83,21 @@ def domain(url: str) -> str:
 def annahmequoten(karten: list) -> dict:
     je_thema = defaultdict(lambda: [0, 0])
     je_quelle = defaultdict(lambda: [0, 0])
+    je_typ = defaultdict(lambda: [0, 0])
     for k in karten:
         st = k.get("status")
         if st not in GENOMMEN and st != "verworfen":
             continue  # "neu" ist noch keine Entscheidung
         genommen = st in GENOMMEN
         je_thema[k.get("thema", "?")][0 if genommen else 1] += 1
+        je_typ[k.get("typ") or "ohne"][0 if genommen else 1] += 1
         for d in {domain(u) for u in k.get("quellen", []) if u}:
             je_quelle[d][0 if genommen else 1] += 1
 
     def fassen(d):
         return {name: {"genommen": g, "verworfen": v, "quote": round(g / (g + v), 3)}
                 for name, (g, v) in sorted(d.items())}
-    return {"thema": fassen(je_thema), "quelle": fassen(je_quelle)}
+    return {"thema": fassen(je_thema), "quelle": fassen(je_quelle), "typ": fassen(je_typ)}
 
 
 def spanne(werte: list) -> dict:
@@ -111,7 +115,7 @@ def auswerten(daten: dict) -> dict:
         t = toene.get(p["id"], {})
         dist = nachschliff_distanz(p.get("draft", ""), p.get("veroeffentlicht", ""))
         er = engagement_rate(kennz[p["id"]]) if p["id"] in kennz else None
-        tabelle.append({"id": p["id"], "ton": t.get("ton"), "experiment": bool(t.get("experiment")),
+        tabelle.append({"id": p["id"], "typ": p.get("typ") or "ohne", "ton": t.get("ton"), "experiment": bool(t.get("experiment")),
                         "nachschliff_distanz": dist, "engagement_rate": er,
                         "verunreinigt": dist > VERUNREINIGT_AB})
 
@@ -125,8 +129,16 @@ def auswerten(daten: dict) -> dict:
             "engagement_rate": spanne([z["engagement_rate"] for z in im
                                        if not z["verunreinigt"] and z["engagement_rate"] is not None]),
         }
+    # Wirkung je Fundtyp: alle Posts mit Kennzahl, Ton egal. Verunreinigte zählen mit,
+    # hier geht es um das Thema, nicht um den Ton.
+    je_typ = defaultdict(list)
+    for z in tabelle:
+        if z["engagement_rate"] is not None:
+            je_typ[z["typ"]].append(z["engagement_rate"])
+    wirkung_je_typ = {typ: spanne(w) for typ, w in sorted(je_typ.items())}
+
     return {"annahmequoten": annahmequoten(daten.get("karten", [])),
-            "posts": tabelle, "ton_vergleich": vergleich}
+            "posts": tabelle, "wirkung_je_typ": wirkung_je_typ, "ton_vergleich": vergleich}
 
 
 def main() -> None:
