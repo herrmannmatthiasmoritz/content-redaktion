@@ -59,6 +59,26 @@ class Metriken(unittest.TestCase):
         self.assertEqual(q["thema"]["X"], {"genommen": 1, "verworfen": 1, "quote": 0.5})
         self.assertEqual(q["quelle"]["a.com"]["quote"], 0.5)
 
+    def test_annahmequote_je_typ(self):
+        q = metriken.annahmequoten([
+            {"thema": "X", "typ": "fallstudie", "status": "ausgewaehlt"},
+            {"thema": "X", "typ": "meldung", "status": "verworfen"},
+            {"thema": "X", "status": "verworfen"},
+        ])
+        self.assertEqual(q["typ"]["fallstudie"]["quote"], 1.0)
+        self.assertEqual(q["typ"]["meldung"]["quote"], 0.0)
+        self.assertEqual(q["typ"]["ohne"]["verworfen"], 1)
+
+    def test_wirkung_je_typ(self):
+        r = metriken.auswerten({
+            "posts": [{"id": "a", "typ": "widerspruch", "draft": "x", "veroeffentlicht": "x"},
+                      {"id": "b", "draft": "x", "veroeffentlicht": "x"}],
+            "kennzahlen": [{"id": "a", "impressionen": 100, "reaktionen": 5,
+                            "kommentare": 0, "reposts": 0}],
+        })
+        self.assertEqual(r["wirkung_je_typ"], {"widerspruch": {"n": 1, "median": 0.05,
+                                                               "min": 0.05, "max": 0.05}})
+
     def test_verunreinigte_posts_fallen_aus_wirkungsvergleich(self):
         r = metriken.auswerten({
             "posts": [

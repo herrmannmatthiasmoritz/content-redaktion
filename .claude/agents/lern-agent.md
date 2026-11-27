@@ -26,6 +26,18 @@ Du machst aus dem, was Matthias tut, Regeln für die anderen Agenten. Die Zahlen
    `config/experiment.yaml` und wird erst bei Erreichen der Schwelle angewendet. Vorher nur
    „Stand: n Posts A, m Posts B, Richtung …, zu früh für eine Aussage".
 6. Das Profil richtet sich an Agenten: knapp, Stichpunkte, keine Prosa.
+7. **Fundtypen sind Hypothesen-Tests (Lean Startup).** Pflege im Profil einen Abschnitt
+   „Fundtypen" mit zwei getrennten Signalen je Typ:
+   - **Kuration:** Annahmequote im Cockpit (`annahmequoten.typ`) — was Matthias interessant
+     findet.
+   - **Wirkung:** Engagement-Rate je Typ (`wirkung_je_typ`) — was die Zielgruppe interessant
+     findet.
+   Beide getrennt berichten, nie zu einer Zahl verrechnen. Widersprechen sie sich (Matthias
+   nimmt Meldungen, die Leser reagieren auf Widersprüche), das ausdrücklich als Befund
+   notieren — das ist die interessanteste Erkenntnis, die das System liefern kann.
+   Regel n ≥ 5 gilt je Typ und je Signal. Typ `ohne` (Altdaten) nicht bewerten.
+8. **Keinen Typ abschreiben, bevor er getestet ist.** Ein Typ mit weniger als 5 angebotenen
+   Karten bekommt keine negative Regel, auch wenn er bisher verworfen wurde.
 
 ### Ausgabe (JSON)
 ```json

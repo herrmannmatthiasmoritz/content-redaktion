@@ -2,7 +2,16 @@
 # Übernommen aus den 5 bisherigen Scheduled Tasks (Stand 23.11.2026).
 # Matthias pflegt diese Datei; der Scout macht nur Vorschläge.
 
-standard_zeitraum: letzte 7 Tage
+# Zeitfenster je Fundtyp (seit 27.11.2026). Aktualität ist ein Plus, nicht der Maßstab:
+# Meldungen nur frisch, Fallstudien/Studien/Widersprüche dürfen älter sein.
+# Ein Thema kann einzelne Werte mit eigenem `zeitfenster:` überschreiben.
+standard_zeitfenster:
+  meldung: 7 Tage
+  fallstudie: 12 Monate
+  studie: 12 Monate
+  widerspruch: 12 Monate
+  patent: 90 Tage
+  debatte: 30 Tage
 
 # Parallelbetrieb mit den alten Recherche-Aufgaben (Phase 1). Solange true, hängt der
 # Redaktionslauf an jeden Dateinamen " (Redaktion)" an, damit alte und neue Karten im
@@ -96,3 +105,35 @@ themen:
     hinweis: >-
       Pausiert, nicht gelöscht. Die alte geplante Aufgabe "Recherche: Wettbewerber-News
       (Hardware-Scale-ups München)" ist ebenfalls nur deaktiviert.
+
+  # --- neu 27.11.2026 ---
+
+  - id: patente-am-ai
+    aktiv: true
+    titel: Patente zu additiver Fertigung und AI in der Fertigung
+    dateiname: Patente AM und AI-Fertigung
+    zeitfenster:
+      patent: 90 Tage
+    fokus: >-
+      Patentanmeldungen und -erteilungen zu additiver Fertigung (Anlagen, Prozessregelung,
+      Werkstoffe, Nachbearbeitung) und zu AI in der Fertigung (Prozessüberwachung,
+      Qualitätsprüfung, Parameteroptimierung). Interessant sind Richtungen, nicht einzelne
+      Nummern: Wer meldet plötzlich viel an, wo tauchen Nicht-AM-Firmen auf, welche Probleme
+      wollen mehrere Anmelder gleichzeitig lösen. Quellen: Google Patents, Espacenet, DPMA,
+      WIPO Patentscope, Patent-Fachmedien.
+    hinweis: >-
+      Anmeldungen von EOS selbst nur als Fakt aufnehmen, nie als Winkel für Matthias —
+      er kommentiert keine Schutzrechte seines Arbeitgebers.
+
+  - id: ai-fuehrung
+    aktiv: true
+    titel: Was AI-Verantwortliche gerade beschäftigt (Head of AI, CAIO, AI-PM, AI Initiative Lead)
+    dateiname: AI-Fuehrung Themen
+    fokus: >-
+      Woran Menschen in AI-Führungsrollen heute arbeiten und worüber sie streiten:
+      Use-Case-Priorisierung und ROI-Nachweis, vom Pilot in den Betrieb, Build vs. Buy,
+      Agenten im Produktivbetrieb, Governance und EU AI Act in der Umsetzung, Datenbasis,
+      Organisation und Rollenzuschnitt, Change und Befähigung. Industrie und Fertigung
+      bevorzugt. Gute Quellen: Umfragen unter AI-Verantwortlichen, Interviews und Talks von
+      CAIOs/Heads of AI, Fachartikel aus Praxis, auffällige Muster in Stellenanzeigen für
+      solche Rollen. Keine Tool-Releases — die gehören zu ai-releases.
