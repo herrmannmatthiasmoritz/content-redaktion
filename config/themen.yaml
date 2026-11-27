@@ -42,6 +42,50 @@ themen:
       Nur Releases mit erkennbarem Anwendungsnutzen für Praktiker; Benchmarks und
       Finanzierungsrunden ohne Anwendungsbezug weglassen (Tool-2-Scope).
 
+  - id: ai-lernstoff
+    aktiv: true
+    art: lernstoff        # zeitlos statt Nachrichtenlage; Sonderregeln in rechercheur.md, redakteur.md, schreiber.md
+    titel: AI verstehen — Zusammenhänge hinter LLMs und Agenten
+    dateiname: AI verstehen
+    zeitraum: zeitlos — ein aktueller Anlass aus den letzten 30 Tagen ist willkommen, aber keine Pflicht
+    fokus: >-
+      Keine Glossar-Einträge, sondern Zusammenhänge: je Woche EINE Leitfrage, die zeigt, wie
+      zwei bis vier Bausteine (Modell, Harness, Tools, Kontext, Trace, Evals, Mensch)
+      zusammenwirken und was daraus für den Betrieb folgt. Zwei Ziele: Matthias versteht das
+      Thema selbst tiefer, und die Karte zahlt auf seine Positionierung ein
+      (Pilot→Serie, Industrialisierung, AI-Adoption in der Fertigung). Einfache Sprache,
+      eine tragende Analogie aus Fertigung oder Werkstatt, belegt aus Primärquellen.
+    material: config/lernstoff/   # Matthias' Rohnotizen; der Rechercheur nutzt sie als Ausgangspunkt
+    # Lernpfad: Die Fragen bauen aufeinander auf, deshalb in dieser Reihenfolge abarbeiten.
+    # Erledigtes erkennt der Lauf an bereits_gesehen. Matthias pflegt diese Liste.
+    lernpfad:
+      - frage: Wer steuert eigentlich einen Agenten, das Modell oder der Harness drumherum?
+        bausteine: [LLM, Agent Harness, Agentic Loop, Tools]
+        positionierung: Der Prototyp ist das Modell, die Serie ist der Harness.
+        material: 2026-11-25-eingang-matthias.md
+      - frage: Woran erkennt man hinterher, warum ein Agent falsch lag?
+        bausteine: [Trace, Spans, Harness, Tool-Calls]
+        positionierung: Ohne Rückverfolgbarkeit keine Freigabe, wie bei jedem Serienbauteil.
+        material: 2026-11-25-eingang-matthias.md
+      - frage: Warum vergisst ein Agent mitten in der Aufgabe, was er wusste?
+        bausteine: [Context Window, Context Engineering, RAG, Harness]
+        positionierung: Information am Arbeitsplatz bereitstellen, nicht im Lager suchen lassen.
+      - frage: Wie bekommt ein Agent Zugriff auf Maschinen und ERP, ohne dass es gefährlich wird?
+        bausteine: [Tool Calling, MCP, Permissions, Human-in-the-Loop]
+        positionierung: Schreibrechte sind eine Freigabefrage, keine Modellfrage.
+      - frage: Wie prüft man einen Agenten, bevor er in Serie geht?
+        bausteine: [Evals, Traces als Testdaten, Regression-Tests]
+        positionierung: Erstmusterprüfung und Regressionstest für Software, die nicht deterministisch ist.
+      - frage: Wann lohnt ein Agent und wann reicht ein fester Workflow?
+        bausteine: [Workflow, Agent, Tokens und Kosten, Latenz]
+        positionierung: Nicht jeder Prozess braucht Autonomie; Kosten pro Durchlauf entscheiden.
+      - frage: Warum halluziniert ein Modell, und was fängt das System davon ab?
+        bausteine: [LLM, RAG, Quellenverlinkung, Human-in-the-Loop]
+        positionierung: Fehler im Einzelteil passieren; das System muss sie abfangen.
+      - frage: Was ändert sich, wenn mehrere Agenten zusammenarbeiten?
+        bausteine: [Sub-Agenten, Handoffs, Orchestrierung, Traces]
+        positionierung: Arbeitsteilung wie in einer Fertigungslinie, mit denselben Schnittstellenproblemen.
+
   - id: wettbewerber-scaleups
     aktiv: false   # deaktiviert 23.11.2026 auf Wunsch von Matthias; zum Reaktivieren auf true setzen
     titel: Hardware-Scale-ups im Raum München (Finanzierung, Kündigungen, Führungswechsel, Produktlaunches)
